@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:whatsmyip/Resources/Private/Language/locallang" date="2022-01-17T06:27:45Z" product-name="whatsmyip">
+		<header/>
+		<body>
+			<trans-unit id="whatsmyip.copy.success" resname="whatsmyip.copy.success">
+				<source>IP copied to clipboard</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

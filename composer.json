@@ -1,0 +1,27 @@
+{
+    "name": "slavlee/whatsmyip",
+    "type": "typo3-cms-extension",
+    "description": "This frontend plugin shows your IP.",
+    "authors": [
+        {
+            "name": "Kevin Chileong Lee",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slavlee\\Whatsmyip\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slavlee\\Whatsmyip\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3-ter/whatsmyip": "self.version"
+    }
+}

@@ -1,0 +1,3 @@
+Version 1.0.0
+- [NEW] Shows your IP in the frontend
+- [NEW] Copy IP address to clipboard

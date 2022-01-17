@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:whatsmyip/Resources/Private/Language/locallang_db" date="2022-01-17T06:27:45Z" product-name="whatsmyip">
+		<header/>
+		<body>
+			<trans-unit id="tx_whatsmyip_pi1.name" resname="tx_whatsmyip_pi1.name">
+				<source>Show my IP</source>
+			</trans-unit>
+			<trans-unit id="tx_whatsmyip_pi1.description" resname="tx_whatsmyip_pi1.description">
+				<source>This frontend plugin shows your IP.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
