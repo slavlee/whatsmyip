@@ -1,3 +1,7 @@
+Version 2.0.0
+- [BREAK] Drop TYPO3 9
+- [NEW] TYPO3 11 Support
+
 Version 1.0.0
 - [NEW] Shows your IP in the frontend
 - [NEW] Copy IP address to clipboard

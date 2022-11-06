@@ -1,0 +1,16 @@
+mod {
+    wizards.newContentElement.wizardItems.plugins {
+        elements {
+            pi1 {
+                iconIdentifier = whatsmyip-plugin-pi1
+                title = LLL:EXT:whatsmyip/Resources/Private/Language/locallang_db.xlf:tx_whatsmyip_pi1.name
+                description = LLL:EXT:whatsmyip/Resources/Private/Language/locallang_db.xlf:tx_whatsmyip_pi1.description
+                tt_content_defValues {
+                    CType = list
+                    list_type = whatsmyip_pi1
+                }
+            }
+        }
+        show = *
+    }
+}

@@ -17,13 +17,10 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Kevin Chileong Lee',
     'author_email' => 'support@slavlee.de',
     'state' => 'stable',
-    'uploadfolder' => '',
-    'createDirs' => '',
-    'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-9.5.99',
+            'typo3' => '11.5.17 - 11.5.99',
         ],
         'conflicts' => [],
         'suggests' => [],
