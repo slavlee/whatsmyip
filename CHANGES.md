@@ -1,3 +1,6 @@
+## Version 3.0.1
+- [BUGFIX] Detecting and showing IPv6
+
 ## Version 3.0.0
 - [IMPORTANT] Drop TYPO3 11
 - [IMPORTANT] TYPO3 12 Support

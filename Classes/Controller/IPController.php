@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 namespace Slavlee\Whatsmyip\Controller;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use Psr\Http\Message\ResponseInterface;
 /***
@@ -54,8 +55,13 @@ class IPController extends ActionController
 			$ip = $_SERVER['REMOTE_ADDR'];
 		}
 
-		$this->view->assign('ip', $ip);
-		$this->view->assign('ipv6', \filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6));
+		if (GeneralUtility::validIPv6($ip)) {
+			$this->view->assign('ip', GeneralUtility::normalizeIPv6($ip));
+			$this->view->assign('ipv6', $ip);
+		}else {
+			$this->view->assign('ip', $ip);
+			$this->view->assign('ipv6', '');
+		}		
 
      	return $this->htmlResponse();
 	}
