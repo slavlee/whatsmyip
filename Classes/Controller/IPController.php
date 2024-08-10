@@ -38,10 +38,25 @@ class IPController extends ActionController
 	 */
 	public function showAction(): ResponseInterface
 	{
-	    /** @var NormalizedParams $normalizedParams */
-	    $normalizedParams = $GLOBALS['TYPO3_REQUEST']->getAttribute('normalizedParams');
-	    
-	    $this->view->assign('ip', $normalizedParams->getRemoteAddress());
-     return $this->htmlResponse();
+		$ip = '';
+
+		if (isset($_SERVER['HTTP_CLIENT_IP'])){
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		}else if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])){
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		}else if(isset($_SERVER['HTTP_X_FORWARDED'])){
+			$ip = $_SERVER['HTTP_X_FORWARDED'];
+		}else if(isset($_SERVER['HTTP_FORWARDED_FOR'])){
+			$ip = $_SERVER['HTTP_FORWARDED_FOR'];
+		}else if(isset($_SERVER['HTTP_FORWARDED'])){
+			$ip = $_SERVER['HTTP_FORWARDED'];
+		}else if(isset($_SERVER['REMOTE_ADDR'])){
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+
+		$this->view->assign('ip', $ip);
+		$this->view->assign('ipv6', \filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6));
+
+     	return $this->htmlResponse();
 	}
 }

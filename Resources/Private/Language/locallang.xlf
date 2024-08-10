@@ -6,6 +6,9 @@
 			<trans-unit id="whatsmyip.copy.success" resname="whatsmyip.copy.success">
 				<source>IP copied to clipboard</source>
 			</trans-unit>
+			<trans-unit id="whatsmyip.IPv6.placeholder" resname="whatsmyip.IPv6.placeholder">
+				<source>IPv6</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
